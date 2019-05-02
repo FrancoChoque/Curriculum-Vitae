@@ -1,0 +1,35 @@
+.Navbar {
+    height: 75px;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;    
+    display: flex;
+    background-color: #bbbbbb;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.Navbar nav {
+    height: 100%;
+}
+
+.Logo {
+    height: 100%;    
+}
+
+@media (max-width: 1000px) {
+    .desktopOnly {
+        display: none;
+    }
+    .Logo {
+        height: 50px;
+        left: 0;
+    }
+    .Navbar {        
+        justify-content: space-between;
+        
+    }
+}
