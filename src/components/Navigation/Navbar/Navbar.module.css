@@ -1,15 +1,16 @@
 .Navbar {
-    height: 75px;
+    height: 56px;
     width: 100%;
-    position: relative;
+    position: fixed;
     top: 0;
-    left: 0;    
+    left: 0;
+    background-color: var(--colors-primary);;
     display: flex;
-    background-color: #bbbbbb;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 10%;
     box-sizing: border-box;
+    
 }
 
 .Navbar nav {
@@ -20,7 +21,10 @@
     height: 100%;    
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 600px) {
+    .Navbar {
+        padding: 0 5%;
+    }
     .desktopOnly {
         display: none;
     }

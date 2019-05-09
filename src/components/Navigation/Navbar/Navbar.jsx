@@ -1,23 +1,47 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styles from "./Navbar.module.css";
-import NavigationItems from "./NavigationItems/NavigationItems";
+import React, { Component } from 'react';
+import styles from './Navbar.module.css';
+import NavigationItems from './NavigationItems/NavigationItems';
+import SideDrawer from './SideDrawer/SideDrawer';
+import DrawerToggle from './DrawerToggle/DrawerToggle';
+import Logo from '../Logo/Logo';
 
-const Navbar = props => {
-  const { drawerToggleClick } = props;
-  return (
-    <header className={styles.Navbar}>
-      <NavigationItems />
-    </header>
-  );
-};
+class Navbar extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showSideDrawer: false,
+    };
+  }
 
-Navbar.propTypes = {
-  drawerToggleClick: PropTypes.func
-};
+  sideDrawerClosedHandler = () => {
+    this.setState({ showSideDrawer: false });
+  }
 
-Navbar.defaultProps = {
-  drawerToggleClick: null
-};
+  sideDrawerToggleHandler = () => {
+    this.setState(prevState => ({
+      showSideDrawer: !prevState.showSideDrawer,
+    }));
+  }
+
+
+  render() {
+    const { showSideDrawer } = this.state;
+    const items = <NavigationItems />;
+    return (
+      <header className={styles.Navbar}>
+        <Logo />
+        <nav className={styles.desktopOnly}>
+          {items}
+        </nav>
+        <DrawerToggle clicked={this.sideDrawerToggleHandler} />
+        <SideDrawer
+          closed={this.sideDrawerClosedHandler}
+          items={items}
+          opened={showSideDrawer}
+        />
+      </header>
+    );
+  }
+}
 
 export default Navbar;

@@ -1,0 +1,35 @@
+.Logo {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;        
+}
+
+.Logo p {
+    margin: 0;
+}
+
+.Name {    
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.Description {
+    color: #ffffff;
+    text-transform: capitalize;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+@media(max-width: 600px) {
+    .Name {
+        font-size: 14px;
+    }
+    .Description {    
+        font-size: 12px;
+    }
+    
+}
