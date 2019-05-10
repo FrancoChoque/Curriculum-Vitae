@@ -2,7 +2,46 @@
     bottom: 0;
     left: 0;    
     height: 100%;
-    width: 100%;
+    width: auto;
+    padding: 2em 20px 20px 20px;    
     display: flex;
+    flex-direction: row;
+    color: #ffffff;
+    justify-content: space-evenly;
     background-color: #1d1d1d;
-} 
+}
+
+.Footer a:hover {
+    color: yellowgreen;
+    text-decoration: none;
+}
+.Footer a {    
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.FooterCol {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.DesktopOnly {
+    margin: 0 5px; 
+}
+
+@media(max-width: 600px) {
+    .DesktopOnly {        
+        display: none;
+    }
+
+    .Footer {        
+        flex-direction: column;
+    }
+
+    .FooterCol {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
