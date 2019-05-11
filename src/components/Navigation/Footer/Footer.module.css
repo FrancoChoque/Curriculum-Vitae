@@ -18,6 +18,7 @@
 .Footer a {    
     color: #ffffff;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .FooterCol {
@@ -26,22 +27,23 @@
     align-items: flex-start;
 }
 
+.FooterCol div {
+    margin: 5px 0;
+}
+
 .DesktopOnly {
-    margin: 0 5px; 
+    margin: auto 5px; 
 }
 
 @media(max-width: 600px) {
-    .DesktopOnly {        
-        display: none;
-    }
-
     .Footer {        
         flex-direction: column;
     }
 
     .FooterCol {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-around;
+        align-items: flex-start;
     }
 }

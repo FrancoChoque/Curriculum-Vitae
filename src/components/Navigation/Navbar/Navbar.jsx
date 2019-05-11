@@ -26,7 +26,7 @@ class Navbar extends Component {
 
   render() {
     const { showSideDrawer } = this.state;
-    const items = <NavigationItems />;
+    const items = <NavigationItems onClick={this.sideDrawerClosedHandler} />;
     return (
       <header className={styles.Navbar}>
         <Logo />

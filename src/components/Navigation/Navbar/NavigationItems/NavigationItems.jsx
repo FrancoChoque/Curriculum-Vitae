@@ -10,7 +10,10 @@ const NavigationItems = () => (
     <NavigationItem path="/portfolio">
         Portfolio
     </NavigationItem>
-    <NavigationItem path="/contact">
+    <NavigationItem path="/cv">
+      My CV
+    </NavigationItem>
+    <NavigationItem hashLink path="contact">
         Contact
     </NavigationItem>
   </ul>
