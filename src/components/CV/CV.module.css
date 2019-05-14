@@ -1,19 +1,71 @@
 .Container {
   flex: 1;
   align-items: center;
-  justify-content: center;
+  justify-content: center;  
   padding: 40px 0;
-  background-color: #aaaaaa;
+  background-color: #aaaaaa;  
+  font-family: Roboto,Helvetica,sans-serif;
 }
 .Layout {
-  width: 595px;
-  height: 842px;
+  width: 21cm;
+  height: 29.7cm;
   margin: auto;
   background-color: #ffffff;
   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
 
-@media(max-width: 600px) {
-  width: 595px;
-  height: 842px;
+.FooterCol a:hover {
+  color: yellowgreen;
+  text-decoration: none;
+}
+.FooterCol a {
+  text-decoration: none;
+  color: var(--colors-primary);
+}
+
+.FooterCol {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  white-space: nowrap;
+  align-items: flex-end;
+  color: var(--colors-primary);
+  font-size: 14px;
+}
+
+.FooterCol div {
+  margin: 5px 0;
+}
+
+.Header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 40px;
+}
+
+.Name {
+  flex: 2;
+  text-align: left;
+  padding: 5px 20px;
+}
+
+.Layout h2 {
+  color: var(--colors-primary);
+  margin: 0;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.Layout h4 {
+  color: #aaaaaa;
+  font-weight: 500;
+  margin: 5px auto;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+.Body {
+  padding: 50px;
+  text-align: left;
 }
