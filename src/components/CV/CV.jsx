@@ -3,21 +3,25 @@ import html2Canvas from 'html2canvas';
 import JsPDF from 'jspdf';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope, faPhoneSquare, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import {
+  faEnvelope,
+  faPhoneSquare,
+  faMapMarkerAlt,
+} from '@fortawesome/free-solid-svg-icons';
 import styles from './CV.module.css';
 import myself from '../../assets/me.png';
-
+import TimelineSide from './TimelineSide/TimelineSide';
+import TimelineBody from './TimelineBody/TimelineBody';
 
 const printDocument = () => {
   const input = document.getElementById('FrancoChoque');
-  html2Canvas(input)
-    .then((canvas) => {
-      const imgData = canvas.toDataURL('image/png');
-      const pdf = new JsPDF();
-      pdf.addImage(imgData, 'JPEG', 0, 0);
-      // pdf.output('dataurlnewwindow');
-      pdf.save('download.pdf');
-    });
+  html2Canvas(input).then((canvas) => {
+    const imgData = canvas.toDataURL('image/png');
+    const pdf = new JsPDF();
+    pdf.addImage(imgData, 'JPEG', 0, 0);
+    // pdf.output('dataurlnewwindow');
+    pdf.save('download.pdf');
+  });
 };
 
 const CV = () => (
@@ -30,9 +34,9 @@ const CV = () => (
         <div className={styles.Name}>
           <h2>Franco Choque</h2>
           <h4>Full-Stack Web Developer</h4>
-          <p style={{ fontStyle: 'italic', color: '#aaaaaa' }}>
-            {`"Never let success get to your head, never let failure get to your heart"`}
-          </p>
+          {/* <p style={{ fontStyle: 'italic', color: '#aaaaaa' }}>
+            {'"Here\'s where I´d put a cool quote if I had one"'}
+          </p> */}
         </div>
         <div className={styles.FooterCol}>
           <div>
@@ -71,27 +75,48 @@ const CV = () => (
       </div>
       <div className={styles.Body}>
         <h2>Experiencia Laboral</h2>
-      <div>
-      <h2>Educación</h2>
-      <ul>
-        <li>
-        2014 - Actualidad Licenciatura en Análsis de sistemas
-        </li>
-        <li>
-        2017 Curso “UNIX” en educación IT.
-        </li>
-        <li>
-        2017 Curso “Fundamentos de programación con SQL Server”
-en educación IT.
-        </li>
-        <li>
-          2015 Curso “Programación Java orientada a objetos” organizado por EMPLEARTEC en la Facultad de Ingeniería (FIUBA).
-        </li>
-      </ul>
-      </div>
+        <div className={styles.TimeLine}>
+          <TimelineSide
+            name="Ixpandit"
+            date="03/2019 - Now"
+            web="web"
+          />
+          <TimelineBody
+            position="Full-Stack Web Developer"
+            description="Built a mobile App"
+          />
+        </div>
+        <div className={styles.TimeLine}>
+          <div className={styles.TimeLineSide}>
+            <div>Ayi & Asociados</div>
+            <div>03/2018 - 12/2018</div>
+            <div>Web</div>
+          </div>
+          <div className={styles.TimeLineBody}>
+            <h4>Front-End and Mobile Developer</h4>
+            <p>Built a mobile app</p>
+          </div>
+        </div>
+        <div>
+          <h2>Educación</h2>
+          <ul>
+            <li>2014 - Actualidad Licenciatura en Análsis de sistemas</li>
+            <li>2017 Curso “UNIX” en educación IT.</li>
+            <li>
+              2017 Curso “Fundamentos de programación con SQL Server” en
+              educación IT.
+            </li>
+            <li>
+              2015 Curso “Programación Java orientada a objetos” organizado por
+              EMPLEARTEC en la Facultad de Ingeniería (FIUBA).
+            </li>
+          </ul>
+        </div>
         <h2>Skills</h2>
       </div>
-      <button type="button" onClick={printDocument}>pdf</button>
+      <button type="button" onClick={printDocument}>
+        pdf
+      </button>
     </div>
   </div>
 );

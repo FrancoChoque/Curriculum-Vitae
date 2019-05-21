@@ -69,3 +69,8 @@
   padding: 50px;
   text-align: left;
 }
+
+.TimeLine {
+  display: flex;
+  flex-direction: row;
+}
