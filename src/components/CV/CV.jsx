@@ -74,7 +74,7 @@ const CV = () => (
         </div>
       </div>
       <div className={styles.Body}>
-        <h2>Experiencia Laboral</h2>
+        <h2>Experiencie</h2>
         <div className={styles.TimeLine}>
           <TimelineSide
             name="Ixpandit"
@@ -98,19 +98,21 @@ const CV = () => (
           </div>
         </div>
         <div>
-          <h2>Educación</h2>
-          <ul>
-            <li>2014 - Actualidad Licenciatura en Análsis de sistemas</li>
-            <li>2017 Curso “UNIX” en educación IT.</li>
-            <li>
-              2017 Curso “Fundamentos de programación con SQL Server” en
-              educación IT.
-            </li>
-            <li>
-              2015 Curso “Programación Java orientada a objetos” organizado por
-              EMPLEARTEC en la Facultad de Ingeniería (FIUBA).
-            </li>
-          </ul>
+          <h2>Education</h2>
+          <div className={styles.Timeline}>
+            <TimelineSide
+              name="Universidad de Buenos Aires"
+              date="2014 - Now"
+            />
+            <TimelineBody />
+          </div>
+          <div className={styles.Timeline}>
+            <TimelineSide
+              name="Colegio Nacional de Buenos Aires"
+              date="2007 - 2011"
+            />
+            <TimelineBody />
+          </div>
         </div>
         <h2>Skills</h2>
       </div>
