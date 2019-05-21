@@ -87,15 +87,15 @@ const CV = () => (
           />
         </div>
         <div className={styles.TimeLine}>
-          <div className={styles.TimeLineSide}>
-            <div>Ayi & Asociados</div>
-            <div>03/2018 - 12/2018</div>
-            <div>Web</div>
-          </div>
-          <div className={styles.TimeLineBody}>
-            <h4>Front-End and Mobile Developer</h4>
-            <p>Built a mobile app</p>
-          </div>
+          <TimelineSide
+            name="Ayi & Asociados"
+            date="03/2018 - 12/2018"
+            web="web"
+          />
+          <TimelineBody
+            position="Front-End and Mobile Developer"
+            description="Built a mobile App"
+          />
         </div>
         <div>
           <h2>Education</h2>
