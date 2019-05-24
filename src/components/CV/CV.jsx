@@ -75,7 +75,7 @@ const CV = () => (
       </div>
       <div className={styles.Body}>
         <h2>Experiencie</h2>
-        <div className={styles.TimeLine}>
+        <div className={styles.Timeline}>
           <TimelineSide
             name="Ixpandit"
             date="03/2019 - Now"
@@ -86,7 +86,7 @@ const CV = () => (
             description="Built a mobile App"
           />
         </div>
-        <div className={styles.TimeLine}>
+        <div className={styles.Timeline}>
           <TimelineSide
             name="Ayi & Asociados"
             date="03/2018 - 12/2018"
@@ -104,14 +104,14 @@ const CV = () => (
               name="Universidad de Buenos Aires"
               date="2014 - Now"
             />
-            <TimelineBody />
+            <TimelineBody position="System Engineer" />
           </div>
           <div className={styles.Timeline}>
             <TimelineSide
               name="Colegio Nacional de Buenos Aires"
               date="2007 - 2011"
             />
-            <TimelineBody />
+            <TimelineBody position="Bachiller" />
           </div>
         </div>
         <h2>Skills</h2>

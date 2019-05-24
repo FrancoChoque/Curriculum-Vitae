@@ -1,6 +1,19 @@
 .TimeLineSide {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  text-align: right;
   font-size: 14px;
+  flex: 1;
+}
+
+.Name {  
+  padding: 5px;
+  background-color: #eeeeee;
+  color: var(--colors-primary);
+}
+
+.Date {
+  color: #aaaaaa;
+  font-size: 12px;
+
 }
