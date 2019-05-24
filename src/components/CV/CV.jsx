@@ -78,24 +78,39 @@ const CV = () => (
         <div className={styles.Timeline}>
           <TimelineSide
             name="Ixpandit"
-            date="03/2019 - Now"
-            web="web"
+            date="01/2019 - Now"
+            web="ixpandit.com"
           />
-          <TimelineBody
-            position="Full-Stack Web Developer"
-            description="Built a mobile App"
-          />
+          <TimelineBody position="Full-Stack Web Developer">
+            <ul>
+              <li>
+                Revamped the frontend of a laravel web app with React, using Node, Express, and Next.js for server side rendering
+              </li>
+              <li>
+                Developed the REST APIs for the aforementioned app
+              </li>
+            </ul>
+          </TimelineBody>
         </div>
         <div className={styles.Timeline}>
           <TimelineSide
             name="Ayi & Asociados"
             date="03/2018 - 12/2018"
-            web="web"
+            web="ayi-asociados.com"
           />
-          <TimelineBody
-            position="Front-End and Mobile Developer"
-            description="Built a mobile App"
-          />
+          <TimelineBody position="Front-End and Mobile Developer">
+            <ul>
+              <li>
+                Built a crossplatform mobile application using React Native and published it on both Play Store and App Store
+              </li>
+              <li>
+                Maintained a React web app.
+              </li>
+              <li>
+                Developed part of the frontend for a banking web app with Angular
+              </li>
+            </ul>
+          </TimelineBody>
         </div>
         <div>
           <h2>Education</h2>
