@@ -84,10 +84,19 @@ const CV = () => (
           <TimelineBody position="Full-Stack Web Developer">
             <ul>
               <li>
-                Revamped the frontend of a laravel web app with React, using Node, Express, and Next.js for server side rendering
+                Developed a fully responsive, progressive web app in React.
               </li>
               <li>
-                Developed the REST APIs for the aforementioned app
+                Implemented GoogleTagManager, GoogleAnalityics and FacebookPixels.
+              </li>
+              <li>
+                Implemtented Node, Express, and Next.js for server side rendering.
+              </li>
+              <li>
+                Developed REST APIs with PHP
+              </li>
+              <li>
+                Developed unit and end-to-end tests for both frontend and backend code of the web using PHPUnit and cypress.
               </li>
             </ul>
           </TimelineBody>
@@ -119,7 +128,16 @@ const CV = () => (
               name="Universidad de Buenos Aires"
               date="2014 - Now"
             />
-            <TimelineBody position="System Engineer" />
+            <TimelineBody position="System Engineer">
+              <ul>
+                <li>
+                  Built a web service using C
+                </li>
+                <li>
+                  Co-developed a machine learning algorythm with Python and the Scikit-learn library
+                </li>
+              </ul>
+            </TimelineBody>
           </div>
           <div className={styles.Timeline}>
             <TimelineSide
