@@ -1,6 +1,7 @@
 import React from 'react';
 import html2Canvas from 'html2canvas';
 import JsPDF from 'jspdf';
+import { Radar } from 'react-chartjs-2';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import {
@@ -14,6 +15,7 @@ import TimelineSide from './TimelineSide/TimelineSide';
 import TimelineBody from './TimelineBody/TimelineBody';
 import Chip from '../UI/Chip/Chip';
 
+
 const printDocument = () => {
   const input = document.getElementById('FrancoChoque');
   html2Canvas(input).then((canvas) => {
@@ -23,6 +25,27 @@ const printDocument = () => {
     // pdf.output('dataurlnewwindow');
     pdf.save('download.pdf');
   });
+};
+
+const Chartdata = {
+  labels: ['Frontend', 'Backend', 'DevOps', 'Testing', 'Teamwork', 'English'],
+  datasets: [
+    {
+      data: [70, 50, 40, 40, 70, 90],
+    },
+  ],
+};
+
+const Chartoptions = {
+  legend: {
+    display: false,
+  },
+  scale: {
+    ticks: {
+      display: false,
+      beginAtZero: true,
+    },
+  },
 };
 
 const CV = () => (
@@ -35,9 +58,6 @@ const CV = () => (
         <div className={styles.Name}>
           <h2>Franco Choque</h2>
           <h4>Full-Stack Web Developer</h4>
-          {/* <p style={{ fontStyle: 'italic', color: '#aaaaaa' }}>
-            {'"Here\'s where I´d put a cool quote if I had one"'}
-          </p> */}
         </div>
         <div className={styles.FooterCol}>
           <div>
@@ -75,7 +95,7 @@ const CV = () => (
         </div>
       </div>
       <div className={styles.Body}>
-        <h2>Experiencie</h2>
+        <h2>Experience</h2>
         <div className={styles.Timeline}>
           <TimelineSide
             name="Ixpandit"
@@ -156,10 +176,24 @@ const CV = () => (
           </div>
         </div>
         <h2>Skills</h2>
-        <Chip text="React" />
+        <div className={styles.Skills}>
+          <Chip text="Javascript" />
+          <Chip text="React.js" />
+          <Chip text="React Native" />
+          <Chip text="Node.js" />
+          <Chip text="Express.js" />
+          <Chip text="Next.js" />
+          <Chip text="HTML" />
+          <Chip text="CSS" />
+          <Chip text="Angular" />
+          <Chip text="Amazon Web Services" />
+          <Chip text="PHP" />
+          <Chip text="Unit / E2E Testing" />
+        </div>
       </div>
-      <button type="button" onClick={printDocument}>
-        pdf
+      {/* <Radar data={Chartdata} options={Chartoptions} /> */}
+      <button className={styles.DownloadButton} type="button" onClick={printDocument}>
+        Download
       </button>
     </div>
   </div>

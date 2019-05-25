@@ -1,9 +1,15 @@
 .Chip {
     background-color: #dddddd;
-    color: black;
+    color: #000000;
+    font-weight: 300;
+    padding: 5px;
+    margin: 5px;
+    font-size: 14px;
+    width: fit-content;
 }
 
 .Chip:hover {
     background-color: var(--colors-primary);
     color: #ffffff;
+    cursor: default;
 }

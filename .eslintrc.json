@@ -23,7 +23,12 @@
         "react"
     ],
     "rules": {
-        "react/forbid-prop-types": "off"
+        "react/forbid-prop-types": "off",
+        "max-len": [
+            "error",
+            { "ignoreStrings" : true},
+            { "code": 200 }
+        ]
     }
     
 }
