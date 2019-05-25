@@ -1,0 +1,9 @@
+.Chip {
+    background-color: #dddddd;
+    color: black;
+}
+
+.Chip:hover {
+    background-color: var(--colors-primary);
+    color: #ffffff;
+}

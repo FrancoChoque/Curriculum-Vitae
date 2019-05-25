@@ -12,6 +12,7 @@ import styles from './CV.module.css';
 import myself from '../../assets/me.png';
 import TimelineSide from './TimelineSide/TimelineSide';
 import TimelineBody from './TimelineBody/TimelineBody';
+import Chip from '../UI/Chip/Chip';
 
 const printDocument = () => {
   const input = document.getElementById('FrancoChoque');
@@ -146,8 +147,16 @@ const CV = () => (
             />
             <TimelineBody position="Bachiller" />
           </div>
+          <div className={styles.Timeline}>
+            <TimelineSide
+              name="Cambridge Assessment English"
+              date="2018"
+            />
+            <TimelineBody position="Certificate in Advanced English (C1)" />
+          </div>
         </div>
         <h2>Skills</h2>
+        <Chip text="React" />
       </div>
       <button type="button" onClick={printDocument}>
         pdf
