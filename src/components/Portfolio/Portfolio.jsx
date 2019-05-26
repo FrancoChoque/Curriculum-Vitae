@@ -2,7 +2,7 @@ import React from 'react';
 
 const Portfolio = () => (
   <div>
-    RRRRRRRRRRRRRRRRRRRRRRRRR
+    In progress
   </div>
 );
 

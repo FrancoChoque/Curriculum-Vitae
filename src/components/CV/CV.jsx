@@ -16,17 +16,6 @@ import TimelineBody from './TimelineBody/TimelineBody';
 import Chip from '../UI/Chip/Chip';
 
 
-const printDocument = () => {
-  const input = document.getElementById('FrancoChoque');
-  html2Canvas(input).then((canvas) => {
-    const imgData = canvas.toDataURL('image/png');
-    const pdf = new JsPDF();
-    pdf.addImage(imgData, 'JPEG', 0, 0);
-    // pdf.output('dataurlnewwindow');
-    pdf.save('download.pdf');
-  });
-};
-
 const Chartdata = {
   labels: ['Frontend', 'Backend', 'DevOps', 'Testing', 'Teamwork', 'English'],
   datasets: [
@@ -95,86 +84,6 @@ const CV = () => (
         </div>
       </div>
       <div className={styles.Body}>
-        <h2>Experience</h2>
-        <div className={styles.Timeline}>
-          <TimelineSide
-            name="Ixpandit"
-            date="01/2019 - Now"
-            web="ixpandit.com"
-          />
-          <TimelineBody position="Full-Stack Web Developer">
-            <ul>
-              <li>
-                Developed a fully responsive, progressive web app in React.
-              </li>
-              <li>
-                Implemented GoogleTagManager, GoogleAnalityics and FacebookPixels.
-              </li>
-              <li>
-                Implemtented Node, Express, and Next.js for server side rendering.
-              </li>
-              <li>
-                Developed REST APIs with PHP
-              </li>
-              <li>
-                Developed unit and end-to-end tests for both frontend and backend code of the web using PHPUnit and cypress.
-              </li>
-            </ul>
-          </TimelineBody>
-        </div>
-        <div className={styles.Timeline}>
-          <TimelineSide
-            name="Ayi & Asociados"
-            date="03/2018 - 12/2018"
-            web="ayi-asociados.com"
-          />
-          <TimelineBody position="Front-End and Mobile Developer">
-            <ul>
-              <li>
-                Built a crossplatform mobile application using React Native and published it on both Play Store and App Store
-              </li>
-              <li>
-                Maintained a React web app.
-              </li>
-              <li>
-                Developed part of the frontend for a banking web app with Angular
-              </li>
-            </ul>
-          </TimelineBody>
-        </div>
-        <div>
-          <h2>Education</h2>
-          <div className={styles.Timeline}>
-            <TimelineSide
-              name="Universidad de Buenos Aires"
-              date="2014 - Now"
-            />
-            <TimelineBody position="System Engineer">
-              <ul>
-                <li>
-                  Built a web service using C
-                </li>
-                <li>
-                  Co-developed a machine learning algorythm with Python and the Scikit-learn library
-                </li>
-              </ul>
-            </TimelineBody>
-          </div>
-          <div className={styles.Timeline}>
-            <TimelineSide
-              name="Colegio Nacional de Buenos Aires"
-              date="2007 - 2011"
-            />
-            <TimelineBody position="Bachiller" />
-          </div>
-          <div className={styles.Timeline}>
-            <TimelineSide
-              name="Cambridge Assessment English"
-              date="2018"
-            />
-            <TimelineBody position="Certificate in Advanced English (C1)" />
-          </div>
-        </div>
         <h2>Skills</h2>
         <div className={styles.Skills}>
           <Chip text="Javascript" />
@@ -190,11 +99,83 @@ const CV = () => (
           <Chip text="PHP" />
           <Chip text="Unit / E2E Testing" />
         </div>
+        <h2>Experience</h2>
+        <div className={styles.Timeline}>
+          <TimelineSide
+            name="Ixpandit"
+            date="01/2019 - Now"
+            web="ixpandit.com"
+          />
+          <TimelineBody
+            position="Full-Stack Web Developer"
+            description="Revamped the frontend of a web app built in Laravel using React. Rewrote part of the backend and developed the REST APIs for the web page."
+          >
+            <ul>
+              <li>
+                Developed a fully responsive, progressive web app in React.
+              </li>
+              <li>
+                Implemented GoogleTagManager, GoogleAnalityics and
+                FacebookPixels.
+              </li>
+              <li>
+                Implemtented Node, Express, and Next.js for server side
+                rendering.
+              </li>
+              <li>Developed REST APIs with PHP.</li>
+              <li>
+                Developed unit and end-to-end tests for both frontend and
+                backend with PHPUnit and Cypress.
+              </li>
+            </ul>
+          </TimelineBody>
+        </div>
+        <div className={styles.Timeline}>
+          <TimelineSide
+            name="Ayi & Asociados"
+            date="03/2018 - 12/2018"
+            web="ayi-asociados.com"
+          />
+          <TimelineBody
+            position="Front-End and Mobile Developer"
+            description="Started as part of a team tasked to mantain an Angular web app, was later assigned to a new project which involved a web app for agency brokers and a mobile app for their clientes. The mobile app allowed users to recieve push notifications and perform stock operations."
+          >
+            <ul>
+              <li>
+                Built a crossplatform mobile application using React Native and
+                published it on both Play Store and App Store.
+              </li>
+              <li>Maintained a React web app.</li>
+              <li>
+                Developed part of the frontend for a banking web app with
+                Angular.
+              </li>
+            </ul>
+          </TimelineBody>
+        </div>
+        <div>
+          <h2>Education</h2>
+          <div className={styles.Timeline}>
+            <TimelineSide
+              name="Universidad de Buenos Aires"
+              date="2016 - Now"
+            />
+            <TimelineBody position="System Engineering" />
+          </div>
+          <div className={styles.Timeline}>
+            <TimelineSide
+              name="Colegio Nacional de Buenos Aires"
+              date="2007 - 2011"
+            />
+            <TimelineBody position="Secondary School" />
+          </div>
+          <div className={styles.Timeline}>
+            <TimelineSide name="Cambridge Assessment English" date="2018" />
+            <TimelineBody position="Certificate in Advanced English (C1)" />
+          </div>
+        </div>
       </div>
       {/* <Radar data={Chartdata} options={Chartoptions} /> */}
-      <button className={styles.DownloadButton} type="button" onClick={printDocument}>
-        Download
-      </button>
     </div>
   </div>
 );

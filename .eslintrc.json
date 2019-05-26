@@ -27,7 +27,7 @@
         "max-len": [
             "error",
             { "ignoreStrings" : true},
-            { "code": 200 }
+            { "code": 300 }
         ]
     }
     
