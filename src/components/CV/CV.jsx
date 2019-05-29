@@ -138,7 +138,7 @@ const CV = () => (
           />
           <TimelineBody
             position="Front-End and Mobile Developer"
-            description="Started as part of a team tasked to maintain an Angular web app, was later assigned to a new project which involved a web app for agency brokers and a mobile app for their clientes. The mobile app allowed users to receive push notifications and perform stock operations."
+            description="Started as part of a team tasked to maintain an Angular web app, was later assigned to a new project which involved a web app for agency brokers and a mobile app for their clients. The mobile app allowed users to receive push notifications and perform stock operations."
           >
             <ul>
               <li>
