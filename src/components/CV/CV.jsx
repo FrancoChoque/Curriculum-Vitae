@@ -119,7 +119,7 @@ const CV = () => (
                 FacebookPixels.
               </li>
               <li>
-                Implemtented Node, Express, and Next.js for server side
+                Implemented Node, Express, and Next.js for server side
                 rendering.
               </li>
               <li>Developed REST APIs with PHP.</li>

@@ -5,5 +5,9 @@
 }
 
 .TimelineBody p {
-    margin: 0;
+    margin: 0;    
+}
+
+.TimelineBody h4 {
+    text-transform: none;
 }
