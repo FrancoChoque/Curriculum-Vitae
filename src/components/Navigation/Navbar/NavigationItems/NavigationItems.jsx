@@ -4,17 +4,11 @@ import styles from './NavigationItems.module.css';
 
 const NavigationItems = () => (
   <ul className={styles.NavigationItems}>
-    <NavigationItem path="/">
-        About
-    </NavigationItem>
-    <NavigationItem path="/portfolio">
-        Portfolio
-    </NavigationItem>
-    <NavigationItem path="/cv">
-      My CV
-    </NavigationItem>
+    <NavigationItem path="/">About</NavigationItem>
+    <NavigationItem path="/portfolio">Portfolio</NavigationItem>
+    <NavigationItem path="/cv">My CV</NavigationItem>
     <NavigationItem hashLink path="contact">
-        Contact
+      Contact
     </NavigationItem>
   </ul>
 );

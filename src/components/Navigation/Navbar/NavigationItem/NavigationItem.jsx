@@ -4,14 +4,12 @@ import { NavLink, withRouter } from 'react-router-dom';
 import { NavHashLink } from 'react-router-hash-link';
 import styles from './NavigationItem.module.css';
 
-const NavigationItem = (props) => {
-  const {
-    children, hashLink, location, path,
-  } = props;
+const NavigationItem = props => {
+  const { children, hashLink, location, path } = props;
   return (
     <li className={styles.NavigationItem}>
       {hashLink ? (
-        <NavHashLink smooth to={`${location.pathname}#${path}`} activeClassName={styles.active} exact>
+        <NavHashLink smooth to={`${location.pathname}#${path}`} exact>
           {children}
         </NavHashLink>
       ) : (
