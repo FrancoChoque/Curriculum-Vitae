@@ -1,7 +1,4 @@
 import React from 'react';
-import html2Canvas from 'html2canvas';
-import JsPDF from 'jspdf';
-import { Radar } from 'react-chartjs-2';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import {
@@ -15,35 +12,15 @@ import TimelineSide from './TimelineSide/TimelineSide';
 import TimelineBody from './TimelineBody/TimelineBody';
 import Chip from '../UI/Chip/Chip';
 
-
-const Chartdata = {
-  labels: ['Frontend', 'Backend', 'DevOps', 'Testing', 'Teamwork', 'English'],
-  datasets: [
-    {
-      data: [70, 50, 40, 40, 70, 90],
-    },
-  ],
-};
-
-const Chartoptions = {
-  legend: {
-    display: false,
-  },
-  scale: {
-    ticks: {
-      display: false,
-      beginAtZero: true,
-    },
-  },
-};
-
-const CV = () => (
+const CV = ({ showPhoto = true }) => (
   <div className={styles.Container}>
     <div id="FrancoChoque" className={styles.Layout}>
       <div className={styles.Header}>
-        <div style={{ flex: 1 }}>
-          <img src={myself} alt="foto" height={180} />
-        </div>
+        {showPhoto && (
+          <div style={{ flex: 1 }}>
+            <img src={myself} alt="foto" height={180} />
+          </div>
+        )}
         <div className={styles.Name}>
           <h2>Franco Choque</h2>
           <h4>Full-Stack Web Developer</h4>
@@ -108,24 +85,21 @@ const CV = () => (
           />
           <TimelineBody
             position="Full-Stack Web Developer"
-            description="Revamped the frontend of a web app built in Laravel using React. Rewrote part of the backend and developed the REST APIs for the web page."
+            description="Migrated the frontend of a Laravel web app to a React SPA. Refactored the backend and developed REST APIs for the web page."
           >
             <ul>
               <li>
-                Developed a fully responsive, progressive web app in React.
-              </li>
-              <li>
-                Implemented GoogleTagManager, GoogleAnalityics and
-                FacebookPixels.
+                Developed a fully responsive, SEO friendly, progressive web app
+                in React.
               </li>
               <li>
                 Implemented Node, Express, and Next.js for server side
                 rendering.
               </li>
-              <li>Developed REST APIs with PHP.</li>
+              <li>Developed REST APIs with PHP and Node.</li>
               <li>
                 Developed unit and end-to-end tests for both frontend and
-                backend with PHPUnit and Cypress.
+                backend with PHPUnit, Chai and Cypress.
               </li>
             </ul>
           </TimelineBody>
@@ -133,12 +107,12 @@ const CV = () => (
         <div className={styles.Timeline}>
           <TimelineSide
             name="Ayi & Asociados"
-            date="03/2018 - 12/2018"
+            date="01/2018 - 12/2018"
             web="ayi-asociados.com"
           />
           <TimelineBody
             position="Front-End and Mobile Developer"
-            description="Started as part of a team tasked to maintain an Angular web app, was later assigned to a new project which involved a web app for agency brokers and a mobile app for their clients. The mobile app allowed users to receive push notifications and perform stock operations."
+            description="Worked mainly in a project which involved a web app for agency brokers and a mobile app for their clients. The mobile app allowed users to receive push notifications and perform stock operations."
           >
             <ul>
               <li>
@@ -167,7 +141,7 @@ const CV = () => (
               name="Colegio Nacional de Buenos Aires"
               date="2007 - 2011"
             />
-            <TimelineBody position="Secondary School" />
+            <TimelineBody position="High School" />
           </div>
           <div className={styles.Timeline}>
             <TimelineSide name="Cambridge Assessment English" date="2018" />
