@@ -5,7 +5,9 @@
     padding: 5px;
     margin: 5px;
     font-size: 14px;
+    border-radius: 5px;
     width: fit-content;
+    -webkit-print-color-adjust: exact;
 }
 
 .Chip:hover {

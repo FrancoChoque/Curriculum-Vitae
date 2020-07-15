@@ -64,42 +64,54 @@ const CV = ({ showPhoto = true }) => (
         <h2>Skills</h2>
         <div className={styles.Skills}>
           <Chip text="Javascript" />
-          <Chip text="React.js" />
+          <Chip text="PHP" />
+          <Chip text="React.js" />          
           <Chip text="React Native" />
           <Chip text="Node.js" />
           <Chip text="Express.js" />
           <Chip text="Next.js" />
+          <Chip text="Laravel" />
           <Chip text="HTML" />
           <Chip text="CSS" />
           <Chip text="Angular" />
           <Chip text="Amazon Web Services" />
-          <Chip text="PHP" />
           <Chip text="Unit / E2E Testing" />
         </div>
         <h2>Experience</h2>
         <div className={styles.Timeline}>
           <TimelineSide
-            name="Ixpandit"
-            date="01/2019 - Now"
-            web="ixpandit.com"
+            name="Erisx"
+            date="06/2020 - now"
+            web="erisx.com"
           />
           <TimelineBody
-            position="Full-Stack Web Developer"
-            description="Migrated the frontend of a Laravel web app to a React SPA. Refactored the backend and developed REST APIs for the web page."
+            position="Frontend Developer"
           >
             <ul>
               <li>
-                Developed a fully responsive, SEO friendly, progressive web app
-                in React.
-              </li>
+                Currently working on an admin app built in React.
+              </li>              
+            </ul>
+          </TimelineBody>
+        </div>
+        <div className={styles.Timeline}>
+          <TimelineSide
+            name="Ixpandit"
+            date="01/2019 - 05/2020"
+            web="ixpandit.com"
+          />
+          <TimelineBody
+            position="Full-Stack Developer"
+          >
+            <ul>
               <li>
-                Implemented Node, Express, and Next.js for server side
-                rendering.
+                Developed a fully responsive, SEO friendly, server side rendered, progressive web app
+                in React.
               </li>
               <li>Developed REST APIs with PHP and Node.</li>
               <li>
-                Developed unit and end-to-end tests for both frontend and
-                backend with PHPUnit, Chai and Cypress.
+                Wrote unit and end-to-end tests for both frontend and
+                backend using PHPUnit, Chai and Cypress.
               </li>
             </ul>
           </TimelineBody>
@@ -112,17 +124,14 @@ const CV = ({ showPhoto = true }) => (
           />
           <TimelineBody
             position="Front-End and Mobile Developer"
-            description="Worked mainly in a project which involved a web app for agency brokers and a mobile app for their clients. The mobile app allowed users to receive push notifications and perform stock operations."
           >
             <ul>
               <li>
                 Built a crossplatform mobile application using React Native and
                 published it on both Play Store and App Store.
               </li>
-              <li>Maintained a React web app.</li>
               <li>
-                Developed part of the frontend for a banking web app with
-                Angular.
+                Developed features for a b2b banking app built in Angular 2+.
               </li>
             </ul>
           </TimelineBody>
@@ -135,13 +144,6 @@ const CV = ({ showPhoto = true }) => (
               date="2016 - Now"
             />
             <TimelineBody position="System Engineering" />
-          </div>
-          <div className={styles.Timeline}>
-            <TimelineSide
-              name="Colegio Nacional de Buenos Aires"
-              date="2007 - 2011"
-            />
-            <TimelineBody position="High School" />
           </div>
           <div className={styles.Timeline}>
             <TimelineSide name="Cambridge Assessment English" date="2018" />
