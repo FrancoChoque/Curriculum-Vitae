@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import styles from './TimelineSide.module.css';
 
 const TimelineSide = (props) => {
-  const { name, date, web } = props;
+  const { name, date, detail } = props;
   return (
     <div className={styles.TimeLineSide}>
-      <div className={styles.Name}>{name}</div>
+      <div className={styles.Name}>{name}</div>      
+      <div className={styles.Web}>{detail}</div>
       <div className={styles.Date}>{date}</div>
-      <div className={styles.Web}>{web}</div>
     </div>
   );
 };

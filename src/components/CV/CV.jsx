@@ -1,18 +1,18 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import {
   faEnvelope,
   faPhoneSquare,
   faMapMarkerAlt,
-} from '@fortawesome/free-solid-svg-icons';
-import styles from './CV.module.css';
-import myself from '../../assets/me.png';
-import TimelineSide from './TimelineSide/TimelineSide';
-import TimelineBody from './TimelineBody/TimelineBody';
-import Chip from '../UI/Chip/Chip';
+} from "@fortawesome/free-solid-svg-icons";
+import styles from "./CV.module.css";
+import myself from "../../assets/me.png";
+import TimelineSide from "./TimelineSide/TimelineSide";
+import TimelineBody from "./TimelineBody/TimelineBody";
+import Chip from "../UI/Chip/Chip";
 
-const CV = ({ showPhoto = true }) => (
+const CV = ({ showPhoto = false }) => (
   <div className={styles.Container}>
     <div id="FrancoChoque" className={styles.Layout}>
       <div className={styles.Header}>
@@ -27,7 +27,7 @@ const CV = ({ showPhoto = true }) => (
         </div>
         <div className={styles.FooterCol}>
           <div>
-            <span>Capital Federal, Argentina </span>
+            <span>Buenos Aires, Argentina </span>
             <FontAwesomeIcon icon={faMapMarkerAlt} />
           </div>
           <div>
@@ -65,32 +65,28 @@ const CV = ({ showPhoto = true }) => (
         <div className={styles.Skills}>
           <Chip text="Javascript" />
           <Chip text="PHP" />
-          <Chip text="React.js" />          
+          <Chip text="React.js" />
           <Chip text="React Native" />
           <Chip text="Node.js" />
           <Chip text="Express.js" />
           <Chip text="Next.js" />
           <Chip text="Laravel" />
-          <Chip text="HTML" />
-          <Chip text="CSS" />
-          <Chip text="Angular" />
           <Chip text="Amazon Web Services" />
           <Chip text="Unit / E2E Testing" />
         </div>
         <h2>Experience</h2>
         <div className={styles.Timeline}>
-          <TimelineSide
-            name="Erisx"
-            date="06/2020 - now"
-            web="erisx.com"
-          />
-          <TimelineBody
-            position="Frontend Developer"
-          >
+          <TimelineSide name="Erisx" date="06/2020 - now" detail="Financial services" />
+          <TimelineBody position="Frontend Developer">
             <ul>
               <li>
-                Currently working on an admin app built in React.
-              </li>              
+                Worked on both B2B and B2C React apps using Redux Sagas and
+                testing with Jest/Enzyme.
+              </li>
+              <li>
+                Developed features for a trading app built with React,
+                Typescript and WebSockets.
+              </li>
             </ul>
           </TimelineBody>
         </div>
@@ -98,20 +94,18 @@ const CV = ({ showPhoto = true }) => (
           <TimelineSide
             name="Ixpandit"
             date="01/2019 - 05/2020"
-            web="ixpandit.com"
+            detail="Financial services"
           />
-          <TimelineBody
-            position="Full-Stack Developer"
-          >
+          <TimelineBody position="Full-Stack Developer">
             <ul>
               <li>
-                Developed a fully responsive, SEO friendly, server side rendered, progressive web app
-                in React.
+                Made a fully responsive, SEO friendly, server side
+                rendered, progressive web app in React.
               </li>
               <li>Developed REST APIs with PHP and Node.</li>
               <li>
-                Wrote unit and end-to-end tests for both frontend and
-                backend using PHPUnit, Chai and Cypress.
+                Wrote unit and end-to-end tests for both frontend and backend
+                using PHPUnit, Chai and Cypress.
               </li>
             </ul>
           </TimelineBody>
@@ -120,18 +114,34 @@ const CV = ({ showPhoto = true }) => (
           <TimelineSide
             name="Ayi & Asociados"
             date="01/2018 - 12/2018"
-            web="ayi-asociados.com"
+            detail="IT Consulting"
           />
-          <TimelineBody
-            position="Front-End and Mobile Developer"
-          >
+          <TimelineBody position="Front-End and Mobile Developer">
             <ul>
               <li>
-                Built a crossplatform mobile application using React Native and
-                published it on both Play Store and App Store.
+                Built a crossplatform mobile application using React Native and AWS.
               </li>
               <li>
-                Developed features for a b2b banking app built in Angular 2+.
+                Developed features for a back office banking app built in Angular 2+.
+              </li>
+            </ul>
+          </TimelineBody>
+        </div>
+        <div className={styles.Timeline}>
+          <TimelineSide
+            name="Freelance"
+            date="03/2019 - Now"
+          />
+          <TimelineBody position="Mobile Developer">
+            <ul>
+              <li>
+                Arcor: Internal enterprise app for notifications and announcements. Tech stack: React Native, Redux and i18n.
+              </li>
+              <li>
+                Appbar: Delivery app for drinks. Tech stack: React Native, MobX, GraphQL and i18n.
+              </li>
+              <li>
+                Liteup: App that allows influencers to apply for marketing campaigns and earn revenue. Tech stack: React Native, Context API, Firebase and Expo.
               </li>
             </ul>
           </TimelineBody>
@@ -146,7 +156,7 @@ const CV = ({ showPhoto = true }) => (
             <TimelineBody position="System Engineering" />
           </div>
           <div className={styles.Timeline}>
-            <TimelineSide name="Cambridge Assessment English" date="2018" />
+            <TimelineSide name="Cambridge English" date="2018" />
             <TimelineBody position="Certificate in Advanced English (C1)" />
           </div>
         </div>
