@@ -64,6 +64,7 @@ const CV = ({ showPhoto = false }) => (
         <h2>Skills</h2>
         <div className={styles.Skills}>
           <Chip text="Javascript" />
+          <Chip text="Typescript" />
           <Chip text="PHP" />
           <Chip text="React.js" />
           <Chip text="React Native" />
@@ -74,17 +75,28 @@ const CV = ({ showPhoto = false }) => (
           <Chip text="Amazon Web Services" />
           <Chip text="Unit / E2E Testing" />
         </div>
+        <div className={styles.Spacer} />
         <h2>Experience</h2>
         <div className={styles.Timeline}>
-          <TimelineSide name="Erisx" date="06/2020 - now" detail="Financial services" />
+          <TimelineSide name="Optic Power - Blitz" date="03/2021 - now" detail="Gaming" />
+          <TimelineBody position="Mobile Developer">
+            <ul>
+              <li>
+                Currently working on the mobile app version of blitz.gg for League of Legends. The stack is React-Native (Typescript), Redux and GraphQL.
+              </li>
+            </ul>
+          </TimelineBody>
+        </div>
+        <div className={styles.Timeline}>
+          <TimelineSide name="Erisx" date="06/2020 - 03/2021" detail="Financial services" />
           <TimelineBody position="Frontend Developer">
             <ul>
               <li>
-                Worked on both B2B and B2C React apps using Redux Sagas and
+                Worked on both back-office and customer-facing React apps using Redux Sagas and
                 testing with Jest/Enzyme.
               </li>
               <li>
-                Developed features for a trading app built with React,
+                Developed features for a crypto currency trading app built with React,
                 Typescript and WebSockets.
               </li>
             </ul>
@@ -130,7 +142,6 @@ const CV = ({ showPhoto = false }) => (
         <div className={styles.Timeline}>
           <TimelineSide
             name="Freelance"
-            date="03/2019 - Now"
           />
           <TimelineBody position="Mobile Developer">
             <ul>
@@ -154,10 +165,6 @@ const CV = ({ showPhoto = false }) => (
               date="2016 - Now"
             />
             <TimelineBody position="System Engineering" />
-          </div>
-          <div className={styles.Timeline}>
-            <TimelineSide name="Cambridge English" date="2018" />
-            <TimelineBody position="Certificate in Advanced English (C1)" />
           </div>
         </div>
       </div>
