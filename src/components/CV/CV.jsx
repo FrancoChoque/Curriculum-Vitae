@@ -93,7 +93,7 @@ const CV = ({ showPhoto = false }) => (
                 Developing common, reusable components such as forms, accordions
                 and cards.
               </li>
-              <li>Updating object properties and writing migrations.</li>
+              <li>Updating objects properties and writing migrations.</li>
             </ul>
           </TimelineBody>
         </div>
