@@ -23,11 +23,11 @@ const CV = ({ showPhoto = false }) => (
         )}
         <div className={styles.Name}>
           <h2>Franco Choque</h2>
-          <h4>Full-Stack Web Developer</h4>
+          <h4>Frontend Developer</h4>
         </div>
         <div className={styles.FooterCol}>
           <div>
-            <span>Buenos Aires, Argentina </span>
+            <span>Bilbao, Spain </span>
             <FontAwesomeIcon icon={faMapMarkerAlt} />
           </div>
           <div>
@@ -35,7 +35,7 @@ const CV = ({ showPhoto = false }) => (
             <FontAwesomeIcon icon={faEnvelope} />
           </div>
           <div>
-            <span> (+54) 1159237943 </span>
+            <span> (+34) 602633072 </span>
             <FontAwesomeIcon icon={faPhoneSquare} />
           </div>
           <div>
@@ -63,52 +63,63 @@ const CV = ({ showPhoto = false }) => (
       <div className={styles.Body}>
         <h2>Skills</h2>
         <div className={styles.Skills}>
-          <Chip text="Javascript" />
           <Chip text="Typescript" />
-          <Chip text="PHP" />
           <Chip text="React.js" />
           <Chip text="React Native" />
           <Chip text="Node.js" />
-          <Chip text="Express.js" />
           <Chip text="Next.js" />
+          <Chip text="PHP" />
           <Chip text="Laravel" />
-          <Chip text="Amazon Web Services" />
-          <Chip text="Unit / E2E Testing" />
-        </div>
+          <Chip text="AWS" />
+        </div>                
         <div className={styles.Spacer} />
         <h2>Experience</h2>
         <div className={styles.Timeline}>
           <TimelineSide
-            name="Autofi"
-            date="10/2021 - Now"
-            detail="Digital Retailing"
+            name="Lastminute.com"
+            date="04/2023 - Now"
+            detail="Online Travel Agency"
           />
-          <TimelineBody position="Fullstack Developer">
+          <TimelineBody position="Frontend Developer">
             <ul>
               <li>
-                Working on an admin web app. Stack is Typescript, React,
-                GraphQL, Apollo, Node and MongoDB.
+                Built and maintained UI components for the cart checkout module using React, MobX, TypeScript, and Java
               </li>
               <li>
-                Developing common, reusable components such as forms, accordions
-                and cards.
+                Implemented UX improvements, AB Tests, and bug tracking/resolution
               </li>
-              <li>Updating objects properties and writing migrations.</li>
             </ul>
           </TimelineBody>
         </div>
         <div className={styles.Timeline}>
           <TimelineSide
-            name="Optic Power - Blitz"
+            name="Autofi"
+            date="10/2021 - 04/2023"
+            detail="Digital Retailing"
+          />
+          <TimelineBody position="Fullstack Developer">
+            <ul>
+              <li>
+                Developed common, reusable components such as forms, accordions
+                and cards for an internal app and a B2B app
+              </li>
+              <li>Managed data models and wrote database migrations</li>
+              <li>
+                Used React, GraphQL (Apollo), Node.js and MongoDB
+              </li>
+            </ul>
+          </TimelineBody>
+        </div>
+        <div className={styles.Timeline}>
+          <TimelineSide
+            name="Optic Power"
             date="03/2021 - 10/2021"
             detail="Gaming"
           />
           <TimelineBody position="Mobile Developer">
             <ul>
               <li>
-                MVP development of blitz.gg mobile app for League of Legends.
-                The stack was Typescript, React-Native, Redux, GraphQL and
-                WebSockets.
+                Worked on an MVP of blitz.gg mobile app for League of Legends using React Native
               </li>
             </ul>
           </TimelineBody>
@@ -123,11 +134,11 @@ const CV = ({ showPhoto = false }) => (
             <ul>
               <li>
                 Worked on both back-office and customer-facing React apps using
-                Redux Sagas and testing with Jest/Enzyme.
+                Redux Sagas and testing with Jest/Enzyme
               </li>
               <li>
                 Developed features for a crypto currency trading app built with
-                React, Typescript and WebSockets.
+                React, Typescript and WebSockets
               </li>
             </ul>
           </TimelineBody>
@@ -141,13 +152,12 @@ const CV = ({ showPhoto = false }) => (
           <TimelineBody position="Full-Stack Developer">
             <ul>
               <li>
-                Made a fully responsive, SEO friendly, server side rendered,
-                progressive web app in React.
+                Created a fully responsive, SEO friendly, server side rendered,
+                progressive web app in NextJs
               </li>
-              <li>Developed REST APIs with PHP and Node.</li>
+              <li>Developed RESTful APIs with PHP and Node</li>
               <li>
-                Wrote unit and end-to-end tests for both frontend and backend
-                using PHPUnit, Chai and Cypress.
+                Implemented frontend/backend testing (PHPUnit, Chai, Cypress)
               </li>
             </ul>
           </TimelineBody>
@@ -161,12 +171,26 @@ const CV = ({ showPhoto = false }) => (
           <TimelineBody position="Front-End and Mobile Developer">
             <ul>
               <li>
-                Built a crossplatform mobile application using React Native and
-                AWS.
+                Built a cross platform mobile app with React Native and
+                AWS
               </li>
               <li>
-                Developed features for a back office banking app built in
-                Angular 2+.
+                Contributed to a back-office banking system in Angular 2+
+              </li>
+            </ul>
+          </TimelineBody>
+        </div>
+        <div className={styles.Timeline}>
+          <TimelineSide
+            name="Freelance"
+          />
+          <TimelineBody position="Mobile Developer">
+            <ul>
+              <li>
+                Developed UI components and maintained mobile apps using React Native
+              </li>
+              <li>
+                Managed deployment to both App Store and Play Store
               </li>
             </ul>
           </TimelineBody>
@@ -196,7 +220,6 @@ const CV = ({ showPhoto = false }) => (
           <div className={styles.Timeline}>
             <TimelineSide
               name="Universidad de Buenos Aires"
-              date="2016 - Now"
             />
             <TimelineBody position="System Engineering" />
           </div>

@@ -76,6 +76,11 @@
   margin: 10px 0;
 }
 
+.Timeline ul {
+  padding-left: 10px;
+  margin: 0;
+}
+
 .Skills {
   display: flex;
   flex-direction: row;

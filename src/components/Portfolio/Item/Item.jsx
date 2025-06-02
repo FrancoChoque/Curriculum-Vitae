@@ -6,7 +6,7 @@ import asset from '../../../assets/linkedin.png';
 const Item = ({ description, link, name }) => (
   <div className={styles.Item} role="presentation">
     <div className={styles.CardContainer}>
-      <img src={asset} />
+
       <div style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
         <p className={styles.header}>{name}</p>
         {description}
@@ -18,7 +18,7 @@ const Item = ({ description, link, name }) => (
 Item.propTypes = {
   description: PropTypes.string,
   link: PropTypes.string,
-  name: PropTypes.name,
+  name: PropTypes.string,
 };
 
 Item.defaultProps = {
